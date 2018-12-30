@@ -25,10 +25,10 @@ except ImportError:
     import src
 
 
-class TestSpeak(unittest.TestCase):
+class TestLONGSpeak(unittest.TestCase):
 
     def setUp(self):
-        add_missing_development_version(["jyquickhelper", "ensae_teaching_cs", "pymmails"],
+        add_missing_development_version(["jyquickhelper", "csharpy", "pymmails"],
                                         __file__, hide=True)
 
     def test_speak(self):
