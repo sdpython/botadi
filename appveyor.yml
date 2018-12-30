@@ -1,0 +1,34 @@
+environment:
+
+  global:
+    WITH_COMPILER: "cmd /E:ON /V:ON /C .\\appveyor\\run_with_compiler.cmd"
+
+  matrix:
+
+    - PYTHON: "C:\\Python37-x64"
+      PYTHON_VERSION: "3.7.x"
+      PYTHON_ARCH: "64"
+
+init:
+  - "ECHO %PYTHON% %PYTHON_VERSION% %PYTHON_ARCH%"
+
+install:
+  - "%PYTHON%\\python -m pip install --upgrade pip"
+  - "%PYTHON%\\Scripts\\pip install pymyinstall"
+  - "%PYTHON%\\Scripts\\pymy_install3 --set=pyquickhelper"
+  - "%PYTHON%\\Scripts\\pymy_install3 --task=tool --source=zip graphviz"
+  - "%PYTHON%\\Scripts\\pip install -r requirements_conda.txt"
+  - "%PYTHON%\\Scripts\\pip install -r requirements.txt"
+  - "set PATH=%PATH%;%PYTHON%\\Scripts"
+  - "set PATH=%PATH%;C:\\projects\\jupytalk\\build\\update_modules\\Graphviz\\bin"
+build: off
+
+test_script:
+  - "%PYTHON%\\python -u setup.py unittests"
+
+after_test:
+  - "%PYTHON%\\python -u setup.py bdist_wheel"
+
+artifacts:
+  - path: dist
+    name: botadi
