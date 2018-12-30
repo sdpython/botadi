@@ -31,8 +31,8 @@ class TestGrammarMokadiExtended(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        from src.jupytalk.mokadi import interpret
-        from src.jupytalk.mokadi.grammars import MokadiGrammar_frParser, MokadiGrammar_frLexer, MokadiGrammar_frListener
+        from src.botadi.mokadi import interpret
+        from src.botadi.mokadi.grammars import MokadiGrammar_frParser, MokadiGrammar_frLexer, MokadiGrammar_frListener
 
         codes = ["MOKADI lire mail",  # 1
                  "MOKADI liste presentation",  # 2

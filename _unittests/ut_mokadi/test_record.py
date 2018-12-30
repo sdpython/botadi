@@ -24,7 +24,7 @@ except ImportError:
     import src
 
 
-from src.jupytalk.mokadi import record_speech, play_speech
+from src.botadi.mokadi import record_speech, play_speech
 
 
 class TestRestApiSpeech(unittest.TestCase):

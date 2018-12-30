@@ -7,4 +7,3 @@
 
     First blog post.
     Split from *jupytalk*.
-    

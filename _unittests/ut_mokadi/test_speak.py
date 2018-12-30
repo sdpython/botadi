@@ -41,7 +41,7 @@ class TestSpeak(unittest.TestCase):
             # no keys
             return
 
-        from src.jupytalk.mokadi import speak
+        from src.botadi.mokadi import speak
 
         try:
             speak("mail reçu à 15h30 mardi 21 septembre.")

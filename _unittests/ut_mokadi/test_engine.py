@@ -24,9 +24,9 @@ except ImportError:
     import src
 
 
-from src.jupytalk.mokadi import MokadiEngine, MokadiMessage, MokadiInfo
-from src.jupytalk.mokadi.mokadi_action_slides import MokadiActionSlides
-from src.jupytalk.mokadi.grammars import MokadiGrammar_frParser, MokadiGrammar_frLexer, MokadiGrammar_frListener
+from src.botadi.mokadi import MokadiEngine, MokadiMessage, MokadiInfo
+from src.botadi.mokadi.mokadi_action_slides import MokadiActionSlides
+from src.botadi.mokadi.grammars import MokadiGrammar_frParser, MokadiGrammar_frLexer, MokadiGrammar_frListener
 
 
 class TestEngine(unittest.TestCase):

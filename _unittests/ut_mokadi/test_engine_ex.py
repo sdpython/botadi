@@ -25,12 +25,12 @@ except ImportError:
     import src
 
 
-from src.jupytalk.mokadi import MokadiEngine, MokadiMessage
-from src.jupytalk.mokadi.mokadi_action_slides import MokadiActionSlides
-from src.jupytalk.mokadi.mokadi_action_conversation import MokadiActionConversation
-from src.jupytalk.mokadi.mokadi_action_mail import MokadiActionMail
-from src.jupytalk.mokadi.mokadi_action_news import MokadiActionNews
-from src.jupytalk.mokadi.grammars import MokadiGrammar_frParser, MokadiGrammar_frLexer, MokadiGrammar_frListener
+from src.botadi.mokadi import MokadiEngine, MokadiMessage
+from src.botadi.mokadi.mokadi_action_slides import MokadiActionSlides
+from src.botadi.mokadi.mokadi_action_conversation import MokadiActionConversation
+from src.botadi.mokadi.mokadi_action_mail import MokadiActionMail
+from src.botadi.mokadi.mokadi_action_news import MokadiActionNews
+from src.botadi.mokadi.grammars import MokadiGrammar_frParser, MokadiGrammar_frLexer, MokadiGrammar_frListener
 
 
 class TestEngineExtended(ExtTestCase):
@@ -66,10 +66,10 @@ class TestEngineExtended(ExtTestCase):
             with warnings.catch_warnings():
                 warnings.simplefilter('ignore', DeprecationWarning)
                 import keyring
-            user = keyring.get_password("gmail", "jupytalk,user")
-            pwd = keyring.get_password("gmail", "jupytalk,pwd")
+            user = keyring.get_password("gmail", "botadi,user")
+            pwd = keyring.get_password("gmail", "botadi,pwd")
             server = "imap.gmail.com"
-            subkey_news = keyring.get_password("cogser", "jupytalk,news")
+            subkey_news = keyring.get_password("cogser", "botadi,news")
             if subkey_news is None:
                 warnings.warn("No key")
                 return

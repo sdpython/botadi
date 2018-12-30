@@ -24,7 +24,7 @@ except ImportError:
         sys.path.append(path)
     import src
 
-from src.jupytalk.mokadi.cognitive_services_helper import call_api_images
+from src.botadi.mokadi.cognitive_services_helper import call_api_images
 
 
 class TestRestApiImages(unittest.TestCase):
@@ -39,7 +39,7 @@ class TestRestApiImages(unittest.TestCase):
         with warnings.catch_warnings():
             warnings.simplefilter('ignore', DeprecationWarning)
             import keyring
-        subkey = keyring.get_password("cogser", "jupytalk,news")
+        subkey = keyring.get_password("cogser", "botadi,news")
         if not subkey:
             warnings.warn("No key")
             return

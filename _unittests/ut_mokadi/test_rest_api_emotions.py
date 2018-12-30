@@ -24,7 +24,7 @@ except ImportError:
         sys.path.append(path)
     import src
 
-from src.jupytalk.mokadi.cognitive_services_helper import call_api_emotions
+from src.botadi.mokadi.cognitive_services_helper import call_api_emotions
 
 
 class TestRestApiEmotions(unittest.TestCase):
@@ -43,7 +43,7 @@ class TestRestApiEmotions(unittest.TestCase):
         with warnings.catch_warnings():
             warnings.simplefilter('ignore', DeprecationWarning)
             import keyring
-        subkey = keyring.get_password("cogser", "jupytalk,emotions")
+        subkey = keyring.get_password("cogser", "botadi,emotions")
         if not subkey:
             warnings.warn("No key")
             return

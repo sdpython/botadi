@@ -25,7 +25,7 @@ except ImportError:
     import src
 
 
-from src.jupytalk.mokadi import enumerate_last_mails
+from src.botadi.mokadi import enumerate_last_mails
 
 
 class TestMail(unittest.TestCase):
@@ -40,8 +40,10 @@ class TestMail(unittest.TestCase):
         with warnings.catch_warnings():
             warnings.simplefilter('ignore', DeprecationWarning)
             import keyring
-        user = keyring.get_password("gmail", "jupytalk,user")
-        pwd = keyring.get_password("gmail", "jupytalk,pwd")
+        user = keyring.get_password("gmail", "botadi,user")
+        pwd = keyring.get_password("gmail", "botadi,pwd")
+        if user is None or pwd is None:
+            raise ValueError("user or pwd is not specified.")
         server = "imap.gmail.com"
         try:
             mails = enumerate_last_mails(user, pwd, server, fLOG=fLOG)

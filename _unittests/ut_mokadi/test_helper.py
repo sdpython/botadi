@@ -23,7 +23,7 @@ except ImportError:
     import src
 
 
-from src.jupytalk.mokadi.mokadi_helper import convert_into_days
+from src.botadi.mokadi.mokadi_helper import convert_into_days
 
 
 class TestHelper(unittest.TestCase):

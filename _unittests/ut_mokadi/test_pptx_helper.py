@@ -24,7 +24,7 @@ except ImportError:
     import src
 
 
-from src.jupytalk.mokadi.pptx_helper import pptx_enumerate_text, pptx_apply_transform
+from src.botadi.mokadi.pptx_helper import pptx_enumerate_text, pptx_apply_transform
 
 
 class TestPptxHelper(unittest.TestCase):

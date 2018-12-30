@@ -25,7 +25,7 @@ except ImportError:
         sys.path.append(path)
     import src
 
-from src.jupytalk.mokadi import take_picture
+from src.botadi.mokadi import take_picture
 
 
 class TestPicture(unittest.TestCase):
@@ -39,7 +39,7 @@ class TestPicture(unittest.TestCase):
 
         temp = get_temp_folder(__file__, "temp_take_picture")
 
-        for module in ["pygame", "cv2"]:
+        for module in ["cv2", "pygame"]:
             fLOG(module)
             img = os.path.join(temp, "im_{0}.png".format(module))
             try:

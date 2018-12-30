@@ -20,7 +20,7 @@ def take_picture(filename=None, size=(1280, 720), module="cv2"):
     if module == "pygame":
         import pygame
         import pygame.camera
-        pygame.camera.init()
+        # pygame.camera.init()
         # pygame.camera.list_camera()
         try:
             cam = pygame.camera.Camera(0, size, "RGB")
@@ -31,6 +31,7 @@ def take_picture(filename=None, size=(1280, 720), module="cv2"):
         img = cam.get_image()
         if filename is not None:
             pygame.image.save(img, filename)
+        cam.stop()
         return img
     elif module == "cv2":
         from cv2 import VideoCapture, imwrite

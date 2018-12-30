@@ -23,7 +23,7 @@ except ImportError:
     import src
 
 
-from src.jupytalk.mokadi import definition_wikipedia, suggestions_wikipedia, synonyms_wiktionary
+from src.botadi.mokadi import definition_wikipedia, suggestions_wikipedia, synonyms_wiktionary
 
 
 class TestWikipedia(unittest.TestCase):

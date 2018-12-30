@@ -25,11 +25,11 @@ except ImportError:
     import src
 
 
-from src.jupytalk.mokadi import MokadiEngine, MokadiMessage
-from src.jupytalk.mokadi.mokadi_action_emotion import MokadiActionEmotion
-from src.jupytalk.mokadi.mokadi_action_conversation import MokadiActionConversation
-from src.jupytalk.mokadi.grammars import MokadiGrammar_frParser, MokadiGrammar_frLexer, MokadiGrammar_frListener
-from src.jupytalk.mokadi.mokadi_exceptions import CognitiveException
+from src.botadi.mokadi import MokadiEngine, MokadiMessage
+from src.botadi.mokadi.mokadi_action_emotion import MokadiActionEmotion
+from src.botadi.mokadi.mokadi_action_conversation import MokadiActionConversation
+from src.botadi.mokadi.grammars import MokadiGrammar_frParser, MokadiGrammar_frLexer, MokadiGrammar_frListener
+from src.botadi.mokadi.mokadi_exceptions import CognitiveException
 
 
 class TestEngineExtended_2(unittest.TestCase):
@@ -55,7 +55,7 @@ class TestEngineExtended_2(unittest.TestCase):
         with warnings.catch_warnings():
             warnings.simplefilter('ignore', DeprecationWarning)
             import keyring
-        subkey_emo = keyring.get_password("cogser", "jupytalk,emotions")
+        subkey_emo = keyring.get_password("cogser", "botadi,emotions")
         messages.append("MOKADI humeur")
         actions.insert(0, MokadiActionEmotion(subkey_emo, temp, fLOG=fLOG))
 

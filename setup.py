@@ -124,8 +124,10 @@ if is_local():
     r = process_standard_options_for_setup(
         sys.argv, __file__, project_var_name, layout=["html"],
         unittest_modules=["pyquickhelper", "jyquickhelper"],
-        additional_notebook_path=["pyquickhelper", "jyquickhelper", "pymmails", "csharpy"],
-        additional_local_path=["pyquickhelper", "jyquickhelper", "pymmails", "csharpy"],
+        additional_notebook_path=["pyquickhelper",
+                                  "jyquickhelper", "pymmails", "csharpy"],
+        additional_local_path=["pyquickhelper",
+                               "jyquickhelper", "pymmails", "csharpy"],
         requirements=["pyquickhelper", "jyquickhelper", "pymmails", "csharpy"],
         add_htmlhelp=sys.platform.startswith("win"),
         coverage_options=dict(omit=["*exclude*.py"]),
@@ -189,5 +191,5 @@ if not r:
         package_dir=package_dir,
         package_data=package_data,
         setup_requires=["pyquickhelper"],
-        install_requires=['pyquickhelper', 'jyquickhelper'],
+        install_requires=['pyquickhelper', 'jyquickhelper', 'pymmails'],
     )

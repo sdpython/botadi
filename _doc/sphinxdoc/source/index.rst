@@ -42,7 +42,6 @@ Experiments around chatbots
         :target: http://www.xavierdupre.fr/app/botadi/helpsphinx/all_notebooks_coverage.html
         :alt: Notebook Coverage
 
-
 **Author:** `Xavier Dupré <http://www.xavierdupre.fr/>`_
 
 .. toctree::
@@ -55,7 +54,6 @@ Experiments around chatbots
     gyexamples/index
     blog/blogindex
     HISTORY
-
 
 +----------------------+---------------------+---------------------+--------------------+------------------------+------------------------------------------------+
 | :ref:`l-modules`     |  :ref:`l-functions` | :ref:`l-classes`    | :ref:`l-methods`   | :ref:`l-staticmethods` | :ref:`l-properties`                            |
