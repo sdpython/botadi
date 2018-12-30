@@ -9,7 +9,7 @@ Experiments around chatbots
         :target: https://travis-ci.org/sdpython/botadi
         :alt: Build status
 
-    .. image:: https://ci.appveyor.com/api/projects/status/cq8d56y2o4ldi7rn?svg=true
+    .. image:: https://ci.appveyor.com/api/projects/status/5qqqxtf4qgab90ec?svg=true
         :target: https://ci.appveyor.com/project/sdpython/botadi
         :alt: Build Status Windows
 
