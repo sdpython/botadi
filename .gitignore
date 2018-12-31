@@ -11,6 +11,8 @@ _virtualenv/
 *.tmp
 *.bak
 *.swp
+*.err
+*.out
 *~.nib
 local.properties
 .classpath
