@@ -5,3 +5,4 @@ pymmails
 pyquickhelper>=1.8
 sphinx_modern_theme_modified
 wheel
+wikipedia
