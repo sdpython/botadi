@@ -28,7 +28,7 @@ except ImportError:
 class TestLONGRestApiSpeech(unittest.TestCase):
 
     def setUp(self):
-        add_missing_development_version(["jyquickhelper", "ensae_teaching_cs", "pymmails"],
+        add_missing_development_version(["jyquickhelper", "pymmails"],
                                         __file__, hide=True)
 
     @unittest.skipIf(is_travis_or_appveyor() is not None, reason="no keys")
