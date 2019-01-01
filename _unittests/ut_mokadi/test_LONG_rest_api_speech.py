@@ -42,9 +42,9 @@ class TestLONGRestApiSpeech(unittest.TestCase):
         with warnings.catch_warnings():
             warnings.simplefilter('ignore', DeprecationWarning)
             import keyring
-        subkey = keyring.get_password("cogser", "jupyter,voicereco")
+        subkey = keyring.get_password("cogser", "botadi,voicereco")
         if not subkey:
-            warnings.warn("not key")
+            warnings.warn("no key")
             return
 
         wav = os.path.join(os.path.abspath(
@@ -52,7 +52,11 @@ class TestLONGRestApiSpeech(unittest.TestCase):
         with open(wav, "rb") as f:
             content = f.read()
 
-        res = call_api_speech_reco(subkey, memwav=content)
+        try:
+            res = call_api_speech_reco(subkey, memwav=content)
+        except NotImplementedError:
+            # removed
+            return
         fLOG(res)
         self.assertTrue(isinstance(res, dict))
         for k, v in res.items():
