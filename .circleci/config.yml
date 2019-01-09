@@ -56,6 +56,7 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements_conda.txt
+            pip install pycurl
             
       - run:
           name: install dependencies (2) - requirements
