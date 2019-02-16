@@ -1,9 +1,4 @@
 
-.. _l-README:
-
-README
-======
-
 .. image:: https://travis-ci.org/sdpython/botadi.svg?branch=master
     :target: https://travis-ci.org/sdpython/botadi
     :alt: Build status
@@ -41,12 +36,14 @@ README
     :target: http://www.xavierdupre.fr/app/botadi/helpsphinx/all_notebooks_coverage.html
     :alt: Notebook Coverage
 
-**Links:**
+.. _l-README:
+
+botadi
+======
+
+Attempt to implement a chatbot and start some tasks
+by voice...
 
 * `GitHub/botadi <https://github.com/sdpython/botadi/>`_
 * `documentation <http://www.xavierdupre.fr/app/botadi/helpsphinx/index.html>`_
 * `Blog <http://www.xavierdupre.fr/app/botadi/helpsphinx/blog/main_0000.html#ap-main-0>`_
-
-**botadi**
-
-Experiments on chatbots.
