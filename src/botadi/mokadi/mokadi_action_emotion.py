@@ -64,7 +64,7 @@ class MokadiActionEmotion(MokadiAction):
 
     def process_interpreted_message(self, interpretation, message):
         """
-        Process the interpreted message.
+        Processes the interpreted message.
 
         @param      interpretation      interpretation
         @param      message             original message
@@ -79,7 +79,7 @@ class MokadiActionEmotion(MokadiAction):
             done = False
         res = call_api_emotions(self._subkey, filename)
         self.fLOG("[MokadiActionEmotion.process_interpreted_message] ", res)
-        if len(res) == 0:
+        if len(res) == 0 or res.get('statusCode', 200) == 404:
             yield MokadiInfo("error", "", "Aucun résultat. Veuillez recommencer.")
             done = True
         elif "error" in res:

@@ -13,7 +13,7 @@ from .mokadi_exceptions import CognitiveException
 
 def bytes2python(answer):
     """
-    Converts JSON bytes into a dictionary.
+    Converts :epkg:`JSON` bytes into a dictionary.
 
     @param      answer      bytes
     @return                 any type
@@ -25,7 +25,7 @@ def bytes2python(answer):
 
 def call_api_news(subscription_key, query, market="fr-FR", count=10, offset=0):
     """
-    Retrieve resuls for news.
+    Retrieves resuls for the news API.
 
     @param      subscription_key
     @param      query               query
@@ -112,7 +112,7 @@ def call_api_news(subscription_key, query, market="fr-FR", count=10, offset=0):
 
 def call_api_images(subscription_key, query, market="fr-FR", count=10, offset=0):
     """
-    Retrieve resuls for images.
+    Retrieves resuls for the image API.
 
     @param      subscription_key
     @param      query               query
@@ -193,7 +193,7 @@ def call_api_speech_reco(subkey, lang="fr-FR", filename=None, memwav=None,
 
 def call_api_emotions(subkey, image_or_bytes):
     """
-    Retrieve resuls for news
+    Retrieves resuls for the emotions API.
 
     @param      subkey              subscription key
     @param      image_or_bytes      image or bytes
@@ -205,8 +205,7 @@ def call_api_emotions(subkey, image_or_bytes):
         'Ocp-Apim-Subscription-Key': subkey,
     }
 
-    params = urllib.parse.urlencode({
-    })
+    params = urllib.parse.urlencode({})
 
     if isinstance(image_or_bytes, str):
         with open(image_or_bytes, "rb") as f:
@@ -224,5 +223,8 @@ def call_api_emotions(subkey, image_or_bytes):
         conn.close()
         return bytes2python(data)
     except Exception as e:
+        import pprint
+        pprint.pprint(e)
+        pprint.pprint(e.__dict__)
         raise CognitiveException("[Errno {0}] {1}".format(
             getattr(e, 'errno', '-'), getattr(e, 'strerror', '-'))) from e
