@@ -49,7 +49,7 @@ class TestRestApiEmotions(unittest.TestCase):
             return
         for img in imgs:
             res = call_api_emotions(subkey, img)
-            if isinstance(res, dict) and "error" in res:
+            if isinstance(res, dict) and res.get('statusCode', 200) == 404:
                 warnings.warn("Key should be checked or renewed.")
                 continue
             if not isinstance(res, list):
