@@ -2,30 +2,11 @@
 """
 @brief      test log(time=10s)
 """
-
-import sys
-import os
 import unittest
 import warnings
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import is_travis_or_appveyor
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-
-from src.botadi.mokadi import enumerate_last_mails
+from botadi.mokadi import enumerate_last_mails
 
 
 class TestMail(unittest.TestCase):

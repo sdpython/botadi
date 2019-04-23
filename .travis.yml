@@ -28,5 +28,6 @@ install:
   - conda install -q --file=requirements_conda.txt
   - conda install pycurl
   - pip install -r requirements.txt
+  - export PYTHONPATH=src
 script:
   - python setup.py unittests

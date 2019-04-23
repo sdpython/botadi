@@ -2,34 +2,15 @@
 """
 @brief      test log(time=10s)
 """
-
-import sys
-import os
 import unittest
 import warnings
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-
-from src.botadi.mokadi import MokadiEngine, MokadiMessage
-from src.botadi.mokadi.mokadi_action_emotion import MokadiActionEmotion
-from src.botadi.mokadi.mokadi_action_conversation import MokadiActionConversation
-from src.botadi.mokadi.grammars import MokadiGrammar_frParser, MokadiGrammar_frLexer, MokadiGrammar_frListener
-from src.botadi.mokadi.mokadi_exceptions import CognitiveException
+from botadi.mokadi import MokadiEngine, MokadiMessage
+from botadi.mokadi.mokadi_action_emotion import MokadiActionEmotion
+from botadi.mokadi.mokadi_action_conversation import MokadiActionConversation
+from botadi.mokadi.grammars import MokadiGrammar_frParser, MokadiGrammar_frLexer, MokadiGrammar_frListener
+from botadi.mokadi.mokadi_exceptions import CognitiveException
 
 
 class TestEngineExtended_2(unittest.TestCase):

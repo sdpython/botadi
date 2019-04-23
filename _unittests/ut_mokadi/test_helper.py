@@ -2,28 +2,9 @@
 """
 @brief      test log(time=10s)
 """
-
-import sys
-import os
 import unittest
 import datetime
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-
-from src.botadi.mokadi.mokadi_helper import convert_into_days
+from botadi.mokadi.mokadi_helper import convert_into_days
 
 
 class TestHelper(unittest.TestCase):

@@ -22,6 +22,7 @@ install:
   - "%PYTHON%\\Scripts\\pip install -r requirements.txt"
   - "set PATH=%PATH%;%PYTHON%\\Scripts"
   - "set PATH=%PATH%;C:\\projects\\jupytalk\\build\\update_modules\\Graphviz\\bin"
+  - set PYTHONPATH=src
 build: off
 
 test_script:

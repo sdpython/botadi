@@ -2,28 +2,9 @@
 """
 @brief      test log(time=40s)
 """
-
-import sys
-import os
 import unittest
 import wikipedia
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-
-from src.botadi.mokadi import definition_wikipedia, suggestions_wikipedia, synonyms_wiktionary
+from botadi.mokadi import definition_wikipedia, suggestions_wikipedia, synonyms_wiktionary
 
 
 class TestWikipedia(unittest.TestCase):
