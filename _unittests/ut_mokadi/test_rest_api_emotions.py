@@ -39,7 +39,11 @@ class TestRestApiEmotions(unittest.TestCase):
                         warnings.warn("Key should be checked or renewed.")
                         continue
             if not isinstance(res, list):
-                raise TypeError('{}\n{}'.format(type(res), res))
+                if "Resource not found" in str(res):
+                    warnings.warn("API changed, it should be updated.")
+                    return
+                else:
+                    raise TypeError('{}\n{}'.format(type(res), res))
             self.assertTrue(len(img) > 0)
             for _ in res:
                 fLOG(_)
