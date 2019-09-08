@@ -35,11 +35,14 @@ def enumerate_last_mails(user, pwd, server, nb=5, fLOG=noLOG):
         raise MokadiAuthentification("Unable to connect to the mailbox") from e
 
     def enumerate_mails(iter):
+        now = datetime.datetime.utcnow()
         for mail in iter:
-            yield mail.get_date(), mail
+            dt = mail.get_date()
+            dt = dt.astimezone(now.tzinfo)
+            yield dt, mail
 
     mails = box.enumerate_mails_in_folder("inbox", pattern=pattern)
-    for i, (dt, mail) in enumerate(sorted(enumerate_mails(mails), reverse=True)):
+    for i, (_, mail) in enumerate(sorted(enumerate_mails(mails), reverse=True)):
         yield mail
         if i >= nb:
             break
