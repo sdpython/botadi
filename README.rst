@@ -28,10 +28,6 @@
     :alt: GitHub Issues
     :target: https://github.com/sdpython/botadi/issues
 
-.. image:: https://badge.waffle.io/sdpython/botadi.png?label=ready&title=Ready
-    :alt: Waffle
-    :target: https://waffle.io/sdpython/botadi
-
 .. image:: http://www.xavierdupre.fr/app/botadi/helpsphinx/_images/nbcov.png
     :target: http://www.xavierdupre.fr/app/botadi/helpsphinx/all_notebooks_coverage.html
     :alt: Notebook Coverage
