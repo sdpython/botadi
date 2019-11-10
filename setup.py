@@ -133,7 +133,7 @@ if is_local():
         fLOG=logging_function, covtoken=(
             "216b00d8-6a02-4643-9ecc-c74ce42be58c", "'_UT_37_std' in outfile"),
         nbformats=('ipynb', 'html', 'python', 'rst',
-                   'slides', 'present', 'github'),
+                   'slides', 'github'),
         github_owner='sdpython')
     if not r and "update_grammars" in sys.argv:
         # expecting python setup.py update_grammars file
