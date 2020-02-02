@@ -23,8 +23,10 @@ class TestMail(unittest.TestCase):
             import keyring
         user = keyring.get_password("gmail", "botadi,user")
         pwd = keyring.get_password("gmail", "botadi,pwd")
-        if user is None or pwd is None:
-            raise ValueError("user or pwd is not specified.")
+        if user is None:
+            raise ValueError("user is not specified.")
+        if pwd is None:
+            raise ValueError("pwd is not specified.")
         server = "imap.gmail.com"
         try:
             mails = enumerate_last_mails(user, pwd, server, fLOG=fLOG)
