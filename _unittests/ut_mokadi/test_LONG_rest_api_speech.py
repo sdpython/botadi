@@ -22,7 +22,7 @@ class TestLONGRestApiSpeech(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        from src.botadi.mokadi.cognitive_services_helper import call_api_speech_reco
+        from botadi.mokadi.cognitive_services_helper import call_api_speech_reco
         with warnings.catch_warnings():
             warnings.simplefilter('ignore', DeprecationWarning)
             import keyring

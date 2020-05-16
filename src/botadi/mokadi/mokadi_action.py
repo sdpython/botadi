@@ -16,12 +16,12 @@ class MokadiAction:
         if fLOG is not None:
             self._fLOG = fLOG
 
-    def fLOG(self, *l, **p):
+    def fLOG(self, *args, **kwargs):
         """
         logging function
         """
         if hasattr(self, "_fLOG") and self._fLOG is not None:
-            self._fLOG(*l, **p)
+            self._fLOG(*args, **kwargs)
 
     def __str__(self):
         """

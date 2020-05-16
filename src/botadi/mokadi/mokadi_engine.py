@@ -53,11 +53,11 @@ class MokadiEngine:
         if not os.path.exists(root):
             raise FileNotFoundError(root)
 
-    def fLOG(self, *l, **p):
+    def fLOG(self, *args, **kwargs):
         """
         message to string
         """
-        self._clog(*l, **p)
+        self._clog(*args, **kwargs)
 
     def process(self, message: MokadiMessage, exc=False):
         """

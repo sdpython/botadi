@@ -185,7 +185,7 @@ class TkinterMokadi(tkinter.Frame):
         self.bind("<<thread_fini>>", self.receive_speech)
         self._waiting = False
 
-    def bound_enter(self, *l):
+    def bound_enter(self, *args):
         """
         Returned was pressed.
         """
@@ -234,14 +234,14 @@ class TkinterMokadi(tkinter.Frame):
             self.thread_listen = th
             self.bind("<<Listener>>", self.from_listener)
 
-    def from_listener(self, *l):
+    def from_listener(self, *args):
         """
         Listener tells to start.
         """
         speak("Je t'écoute.")
         self.get_response()
 
-    def receive_speech(self, *l):
+    def receive_speech(self, *args):
         """
         Reveices the recognized speech.
         """

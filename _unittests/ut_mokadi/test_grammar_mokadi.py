@@ -14,8 +14,8 @@ class TestGrammarMokadi(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        from src.botadi.mokadi.mokadi_parser import get_tree_string, parse_mokadi
-        from src.botadi.mokadi.grammars import MokadiGrammar_frParser, MokadiGrammar_frLexer, MokadiGrammar_frListener
+        from botadi.mokadi.mokadi_parser import get_tree_string, parse_mokadi
+        from botadi.mokadi.grammars import MokadiGrammar_frParser, MokadiGrammar_frLexer, MokadiGrammar_frListener
 
         codes = ["MOKADI a", "MOKADI lire mail"]
         expec = [[('MOKADI', ':MOKADI:'), ('a', ':word:'), ('<EOF>', ':P:')],
@@ -52,8 +52,8 @@ class TestGrammarMokadi(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        from src.botadi.mokadi import interpret
-        from src.botadi.mokadi.grammars import MokadiGrammar_frParser, MokadiGrammar_frLexer, MokadiGrammar_frListener
+        from botadi.mokadi import interpret
+        from botadi.mokadi.grammars import MokadiGrammar_frParser, MokadiGrammar_frLexer, MokadiGrammar_frListener
 
         codes = ["MOKADI a", "MOKADI lire mail"]
         expec = [[('MOKADI', ':MOKADI:'), ('a', ':word:'), ('<EOF>', ':P:')],
@@ -73,8 +73,8 @@ class TestGrammarMokadi(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        from src.botadi.mokadi import interpret
-        from src.botadi.mokadi.grammars import MokadiGrammar_frParser, MokadiGrammar_frLexer, MokadiGrammar_frListener
+        from botadi.mokadi import interpret
+        from botadi.mokadi.grammars import MokadiGrammar_frParser, MokadiGrammar_frLexer, MokadiGrammar_frListener
 
         try:
             interpret("ROOCADI", MokadiGrammar_frParser,

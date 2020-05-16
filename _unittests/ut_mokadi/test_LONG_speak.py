@@ -25,7 +25,7 @@ class TestLONGSpeak(unittest.TestCase):
             # no keys
             return
 
-        from src.botadi.mokadi import speak
+        from botadi.mokadi import speak
 
         try:
             speak("mail reçu à 15h30 mardi 21 septembre.")
