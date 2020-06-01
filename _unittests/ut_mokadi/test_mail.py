@@ -26,7 +26,8 @@ class TestMail(unittest.TestCase):
         if user is None:
             raise ValueError("user is not specified.")
         if pwd is None:
-            raise ValueError("pwd is not specified.")
+            warnings.warn("pwd is not specified.")
+            return
         server = "imap.gmail.com"
         try:
             mails = enumerate_last_mails(user, pwd, server, fLOG=fLOG)
