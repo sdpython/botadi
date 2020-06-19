@@ -38,6 +38,10 @@ Experiments around chatbots
         :target: http://www.xavierdupre.fr/app/botadi/helpsphinx/all_notebooks_coverage.html
         :alt: Notebook Coverage
 
+    .. image:: https://img.shields.io/github/repo-size/sdpython/botadi
+        :target: https://github.com/sdpython/botadi/
+        :alt: size
+
 **Author:** `Xavier Dupré <http://www.xavierdupre.fr/>`_
 
 .. toctree::
