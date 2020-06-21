@@ -6,7 +6,9 @@ pylint
 pymmails
 pyquickhelper>=1.8
 python-pptx
+sphinx_gallery
 sphinx_modern_theme_modified
+sphinxcontrib.imagesvg
 wheel
 wikipedia
 wptools
