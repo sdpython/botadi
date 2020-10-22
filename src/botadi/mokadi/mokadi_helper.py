@@ -66,8 +66,8 @@ def parse_string_int(text: str) -> int:
         raise ValueError("Text to convert cannot be a string.")
     try:
         return int(text)
-    except ValueError:
+    except ValueError as e:
         if text in _int_values:
             return _int_values[text]
-        else:
-            raise ValueError("Unable to convert '{0}' into int.".format(text))
+        raise ValueError(
+            "Unable to convert '{0}' into int.".format(text)) from e
