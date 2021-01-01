@@ -48,7 +48,7 @@ jobs:
       - run:
           name: install avconv (ffmpeg)
           command: |
-                    sudo apt-get install libav-tools
+                    sudo apt-get install ffmpeg
 
       - run:
           name: install dependencies (1) - requirements_conda
