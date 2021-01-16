@@ -74,7 +74,7 @@ class ThreadListenProcess(threading.Thread):
 
     def run(self):
         self.fLOG("[Listen] start")
-        process, parent_conn, child_conn = start_process_listen()
+        process, parent_conn, _ = start_process_listen()
         self.process = process
         good = {'123', 'et 23', '23', 'et 223', '923', '2123', ', 923', 'l\'un des trois',
                 '0123', 'Trois'}
