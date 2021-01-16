@@ -18,11 +18,8 @@ class TestMail(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        with warnings.catch_warnings():
-            warnings.simplefilter('ignore', DeprecationWarning)
-            import keyring
-        user = keyring.get_password("gmail", "botadi,user")
-        pwd = keyring.get_password("gmail", "botadi,pwd")
+        user = get_password("gmail", "botadi,user")
+        pwd = get_password("gmail", "botadi,pwd")
         if user is None:
             raise ValueError("user is not specified.")
         if pwd is None:

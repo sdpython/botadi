@@ -5,7 +5,7 @@
 import os
 import unittest
 import warnings
-from pyquickhelper.loghelper import fLOG
+from pyquickhelper.loghelper import fLOG, get_password
 from pyquickhelper.pycode import is_travis_or_appveyor
 from botadi.mokadi.cognitive_services_helper import call_api_emotions
 
@@ -23,10 +23,7 @@ class TestRestApiEmotions(unittest.TestCase):
         imgs = [os.path.join(path, "84-cate-blanchett-jude-quinn-i-m-not-there-2007--630-75.jpg"),
                 os.path.join(path, "Cate_Blanchett_Deauville_2013_2.jpg")]
 
-        with warnings.catch_warnings():
-            warnings.simplefilter('ignore', DeprecationWarning)
-            import keyring
-        subkey = keyring.get_password("cogser", "botadi,emotions")
+        subkey = get_password("cogser", "botadi,emotions")
         if not subkey:
             warnings.warn("No key")
             return

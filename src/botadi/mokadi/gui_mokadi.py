@@ -11,7 +11,7 @@ import threading
 import warnings
 from queue import Queue
 from PIL import Image, ImageTk
-from pyquickhelper.loghelper import CustomLog, fLOG
+from pyquickhelper.loghelper import CustomLog, fLOG, get_password, get_password
 from .grammars import MokadiGrammar_frParser, MokadiGrammar_frLexer, MokadiGrammar_frListener
 from .mokadi_message import MokadiMessage
 from .mokadi_engine import MokadiEngine
@@ -312,17 +312,14 @@ def gui_mokadi(fLOG=None, folder_slides=None):
     runs first. We need to take a picture first.
     """
     take_picture()
-    with warnings.catch_warnings():
-        warnings.simplefilter('ignore', DeprecationWarning)
-        import keyring
-    user = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "user")
-    pwd = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "pwd")
+    user = get_password("gmail", os.environ["COMPUTERNAME"] + "user")
+    pwd = get_password("gmail", os.environ["COMPUTERNAME"] + "pwd")
     server = "imap.gmail.com"
-    subkey_news = keyring.get_password(
+    subkey_news = get_password(
         "cogser", os.environ["COMPUTERNAME"] + "news")
-    subkey_emo = keyring.get_password(
+    subkey_emo = get_password(
         "cogser", os.environ["COMPUTERNAME"] + "emotions")
-    subkey_speech = keyring.get_password(
+    subkey_speech = get_password(
         "cogser", os.environ["COMPUTERNAME"] + "voicereco")
 
     if folder_slides is None:

@@ -5,7 +5,7 @@
 import os
 import unittest
 import warnings
-from pyquickhelper.loghelper import fLOG
+from pyquickhelper.loghelper import fLOG, get_password
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, ExtTestCase
 from botadi.mokadi import MokadiEngine, MokadiMessage
 from botadi.mokadi.mokadi_action_slides import MokadiActionSlides
@@ -45,13 +45,10 @@ class TestEngineExtended(ExtTestCase):
         # Adding test which requires credentials.
         if not is_travis_or_appveyor():
             fLOG("Adding actions with credentials.")
-            with warnings.catch_warnings():
-                warnings.simplefilter('ignore', DeprecationWarning)
-                import keyring
-            user = keyring.get_password("gmail", "botadi,user")
-            pwd = keyring.get_password("gmail", "botadi,pwd")
+            user = get_password("gmail", "botadi,user")
+            pwd = get_password("gmail", "botadi,pwd")
             server = "imap.gmail.com"
-            subkey_news = keyring.get_password("cogser", "botadi,news")
+            subkey_news = get_password("cogser", "botadi,news")
             if subkey_news is None:
                 warnings.warn("No key")
                 return

@@ -4,7 +4,7 @@
 """
 import unittest
 import warnings
-from pyquickhelper.loghelper import fLOG
+from pyquickhelper.loghelper import fLOG, get_password
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from botadi.mokadi import MokadiEngine, MokadiMessage
 from botadi.mokadi.mokadi_action_emotion import MokadiActionEmotion
@@ -33,10 +33,7 @@ class TestEngineExtended_2(unittest.TestCase):
 
         # Adding test which requires credentials.
         fLOG("Adding actions with credentials.")
-        with warnings.catch_warnings():
-            warnings.simplefilter('ignore', DeprecationWarning)
-            import keyring
-        subkey_emo = keyring.get_password("cogser", "botadi,emotions")
+        subkey_emo = get_password("cogser", "botadi,emotions")
         messages.append("MOKADI humeur")
         actions.insert(0, MokadiActionEmotion(subkey_emo, temp, fLOG=fLOG))
 

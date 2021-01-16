@@ -4,7 +4,7 @@
 """
 import unittest
 import warnings
-from pyquickhelper.loghelper import fLOG
+from pyquickhelper.loghelper import fLOG, get_password
 from pyquickhelper.pycode import is_travis_or_appveyor
 from botadi.mokadi.cognitive_services_helper import call_api_news
 
@@ -18,10 +18,7 @@ class TestRestApiNews(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        with warnings.catch_warnings():
-            warnings.simplefilter('ignore', DeprecationWarning)
-            import keyring
-        subkey = keyring.get_password("cogser", "botadi,news")
+        subkey = get_password("cogser", "botadi,news")
         if not subkey:
             warnings.warn("No key")
             return
