@@ -8,10 +8,9 @@ import tkinter.ttk as tttk
 import tkinter.scrolledtext as ScrolledText
 import os
 import threading
-import warnings
 from queue import Queue
 from PIL import Image, ImageTk
-from pyquickhelper.loghelper import CustomLog, fLOG, get_password, get_password
+from pyquickhelper.loghelper import CustomLog, fLOG, get_password
 from .grammars import MokadiGrammar_frParser, MokadiGrammar_frLexer, MokadiGrammar_frListener
 from .mokadi_message import MokadiMessage
 from .mokadi_engine import MokadiEngine
