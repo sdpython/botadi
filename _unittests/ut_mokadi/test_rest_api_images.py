@@ -18,9 +18,6 @@ class TestRestApiImages(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        with warnings.catch_warnings():
-            warnings.simplefilter('ignore', DeprecationWarning)
-            import keyring
         subkey = get_password("cogser", "botadi,news")
         if not subkey:
             warnings.warn("No key")

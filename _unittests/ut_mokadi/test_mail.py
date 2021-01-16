@@ -4,7 +4,7 @@
 """
 import unittest
 import warnings
-from pyquickhelper.loghelper import fLOG
+from pyquickhelper.loghelper import fLOG, get_password
 from pyquickhelper.pycode import is_travis_or_appveyor
 from botadi.mokadi import enumerate_last_mails
 
