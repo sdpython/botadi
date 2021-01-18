@@ -131,7 +131,7 @@ if is_local():
         add_htmlhelp=sys.platform.startswith("win"),
         coverage_options=dict(omit=["*exclude*.py"]),
         fLOG=logging_function, covtoken=(
-            "216b00d8-6a02-4643-9ecc-c74ce42be58c", "'_UT_37_std' in outfile"),
+            "216b00d8-6a02-4643-9ecc-c74ce42be58c", "'_UT_39_std' in outfile"),
         nbformats=('ipynb', 'html', 'python', 'rst',
                    'slides', 'github'),
         github_owner='sdpython')
