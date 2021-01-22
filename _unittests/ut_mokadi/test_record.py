@@ -6,11 +6,12 @@ import os
 import unittest
 import warnings
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import is_travis_or_appveyor, get_temp_folder
+from pyquickhelper.pycode import (
+    is_travis_or_appveyor, get_temp_folder, ExtTestCase)
 from botadi.mokadi import record_speech, play_speech
 
 
-class TestRestApiSpeech(unittest.TestCase):
+class TestRestApiSpeech(ExtTestCase):
 
     @unittest.skipIf(is_travis_or_appveyor() is not None, reason="no keys")
     def test_record(self):
@@ -24,6 +25,7 @@ class TestRestApiSpeech(unittest.TestCase):
         except ImportError:
             warnings.warn("pyaudio is missing.")
             return
+        self.assertNotEmpty(pyaudio)
         fLOG("record")
         temp = get_temp_folder(__file__, "temp_record")
         output = os.path.join(temp, "output.wav")
