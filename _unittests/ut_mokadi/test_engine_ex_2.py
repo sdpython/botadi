@@ -22,6 +22,7 @@ class TestEngineExtended_2(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
+        from cv2 import error
         temp = get_temp_folder(__file__, "temp_engine_ex_2")
         clog = fLOG
 
@@ -46,8 +47,9 @@ class TestEngineExtended_2(unittest.TestCase):
             mes = MokadiMessage(text, 1)
             try:
                 res = list(engine.process(mes, exc=True))
-            except CognitiveException:
-                warnings.warn("Unable to process '{0}'".format(text))
+            except (CognitiveException, error) as e:
+                warnings.warn("Unable to process '{}' due to '{}'.".format(
+                    text, e))
                 continue
             fLOG(res)
             self.assertTrue(len(res) > 0)

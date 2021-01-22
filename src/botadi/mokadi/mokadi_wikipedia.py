@@ -5,7 +5,6 @@
 """
 import re
 import wikipedia
-import wptools
 from .mokadi_exceptions import WikipediaException
 
 
@@ -63,6 +62,7 @@ def synonyms_wiktionary(name, lang="fr"):
 
     `Wiktionay API <https://en.wiktionary.org/w/api.php>`_.
     """
+    import wptools
     page = wptools.page(name, wiki='{0}.wiktionary.org'.format(
         lang), lang=lang, silent=True)
     page.get_parse()

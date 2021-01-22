@@ -18,6 +18,11 @@ class TestRestApiSpeech(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
+        try:
+            import pyaudio
+        except ImportError:
+            warnings.warn("pyaudio is missing.")
+            return
         fLOG("record")
         temp = get_temp_folder(__file__, "temp_record")
         output = os.path.join(temp, "output.wav")
