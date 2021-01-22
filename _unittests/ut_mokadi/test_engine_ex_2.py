@@ -22,7 +22,10 @@ class TestEngineExtended_2(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        from cv2 import error
+        try:
+            from cv2 import error
+        except ImportError:
+            return
         temp = get_temp_folder(__file__, "temp_engine_ex_2")
         clog = fLOG
 

@@ -4,6 +4,7 @@
 """
 import os
 import unittest
+import warnings
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import is_travis_or_appveyor, get_temp_folder
 from botadi.mokadi import record_speech, play_speech
