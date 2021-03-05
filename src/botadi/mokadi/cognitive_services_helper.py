@@ -174,7 +174,7 @@ def call_api_speech_reco(subkey, lang="fr-FR", filename=None, memwav=None,
                          url="https://speech.platform.bing.com/recognize"):
     """
     Implemented in module
-    `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/py-modindex.html>`_.
+    `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/py-modindex.html>`_.
     Only available on Windows for the time being (relies on C# code).
 
     @param      subkey      subscription key
