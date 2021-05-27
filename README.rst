@@ -1,6 +1,6 @@
 
-.. image:: https://travis-ci.org/sdpython/botadi.svg?branch=master
-    :target: https://travis-ci.org/sdpython/botadi
+.. image:: https://travis-ci.com/sdpython/botadi.svg?branch=master
+    :target: https://travis-ci.com/sdpython/botadi
     :alt: Build status
 
 .. image:: https://ci.appveyor.com/api/projects/status/5qqqxtf4qgab90ec?svg=true
