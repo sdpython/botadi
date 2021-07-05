@@ -5,7 +5,7 @@
 Experiments around chatbots.
 """
 
-__version__ = "0.2.49"
+__version__ = "0.2.64"
 __author__ = "Xavier Dupré"
 __github__ = "https://github.com/sdpython/botadi"
 __url__ = "http://www.xavierdupre.fr/app/botadi/helpsphinx/index.html"

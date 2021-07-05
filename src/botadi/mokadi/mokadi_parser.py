@@ -33,7 +33,7 @@ def print_level_order(node, indent=0):
            toilette - <ErrorNodeImpl>
     """
     rows = []
-    cl = str(type(node)).split(".")[-1].strip("'><")
+    cl = str(type(node)).split(".")[-1].strip("'><")  # pylint: disable=C0207
     if cl.endswith("Context"):
         cl = cl[:-7]
     rows.append('{0}{1} - <{2}>'.format('   ' * indent, node.getText(), cl))
