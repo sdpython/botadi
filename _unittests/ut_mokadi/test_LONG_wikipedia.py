@@ -42,7 +42,7 @@ class TestWikipedia(unittest.TestCase):
         self.assertEqual(len(res), 9)
         ans1 = ['boulot', 'chagrin', 'emploi', 'gagne-pain',
                 'job', 'métier', 'profession', 'taf', 'turbin']
-        self.assertIn(res, ans1)
+        self.assertEqual(res, ans1)
 
 
 if __name__ == "__main__":
