@@ -39,7 +39,7 @@ class TestWikipedia(unittest.TestCase):
     def test_dictionary_synonym_travail(self):
         res = synonyms_wiktionary("travail")
         self.assertTrue(isinstance(res, list))
-        self.assertEqual(len(res), 10)
+        self.assertIn(len(res), (9, 10))
         self.assertEqual(res, ['boulot', 'chagrin', 'emploi', 'gagne-pain',
                                'job', 'métier', 'profession', 'job', 'taf', 'turbin'])
 
