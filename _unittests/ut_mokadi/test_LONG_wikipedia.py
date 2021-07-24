@@ -40,8 +40,11 @@ class TestWikipedia(unittest.TestCase):
         res = synonyms_wiktionary("travail")
         self.assertTrue(isinstance(res, list))
         self.assertIn(len(res), (9, 10))
-        self.assertEqual(res, ['boulot', 'chagrin', 'emploi', 'gagne-pain',
-                               'job', 'métier', 'profession', 'job', 'taf', 'turbin'])
+        ans1 = ['boulot', 'chagrin', 'emploi', 'gagne-pain',
+                'job', 'métier', 'profession', 'job', 'taf', 'turbin']
+        ans2 = ans1.copy()
+        del ans2[ans2.index('job')]
+        self.assertIn(res, (ans1, ans2))
 
 
 if __name__ == "__main__":
