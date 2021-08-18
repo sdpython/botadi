@@ -5,7 +5,7 @@ jyquickhelper
 pycodestyle
 pylint
 pymmails
-pyquickhelper>=1.10.3616
+pyquickhelper>=1.10.3626
 python-pptx
 sphinx_gallery
 sphinx_modern_theme_modified
