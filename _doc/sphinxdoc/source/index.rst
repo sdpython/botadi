@@ -23,10 +23,6 @@ Experiments around chatbots
         :alt: MIT License
         :target: http://opensource.org/licenses/MIT
 
-    .. image:: https://requires.io/github/sdpython/botadi/requirements.svg?branch=master
-         :target: https://requires.io/github/sdpython/botadi/requirements/?branch=master
-         :alt: Requirements Status
-
     .. image:: https://codecov.io/github/sdpython/botadi/coverage.svg?branch=master
         :target: https://codecov.io/github/sdpython/botadi?branch=master
 
