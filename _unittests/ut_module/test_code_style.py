@@ -48,7 +48,7 @@ class TestCodeStyle(ExtTestCase):
         check_pep8(test, fLOG=fLOG, neg_pattern="temp_.*",
                    pylint_ignore=('C0103', 'C1801', 'R0201', 'R1705', 'W0108', 'W0613',
                                   'C0111', 'W0703', 'C0122', 'W0101', 'R1707',
-                                  'C0415'),
+                                  'C0415', 'W0640'),
                    skip=["Unable to import 'ensae_teaching_cs.pythonnet'",
                          "Redefining name 'path' from outer scope",
                          "Unable to import 'keyring'",
