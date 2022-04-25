@@ -19,7 +19,7 @@ def definition_wikipedia(query, summary=True, lang="fr"):
     """
     wikipedia.set_lang("fr")
     if summary:
-        res = wikipedia.summary(query, sentences=1)
+        res = wikipedia.summary(query, sentences=1, auto_suggest=False)
         return res.strip("# ")
     else:
         res = wikipedia.search(query, results=1)

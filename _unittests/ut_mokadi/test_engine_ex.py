@@ -33,8 +33,7 @@ class TestEngineExtended(ExtTestCase):
                     "MOKADI lire presentation 1 slide numéro 2",
                     "MOKADI hello",
                     "MOKADI bruit de toilette",
-                    "MOKADI définition de la tour eiffel",
-                    "MOKADI c'est quoi la tour eiffel",
+                    "MOKADI définition de la Tour Eiffel",
                     "MOKADI synonymes de ville",
                     ]
 
