@@ -3,7 +3,7 @@ coverage
 jupyter_sphinx
 jyquickhelper
 pycodestyle
-pylint
+pylint>=2.14.0
 pymmails
 pyquickhelper>=1.10.3626
 python-pptx
